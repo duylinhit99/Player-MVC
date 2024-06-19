@@ -44,7 +44,7 @@
                         echo "Update thât bại";
                     }     
                 } else{
-                    require 'view/update.php';
+                    require_once('view/update.php');
                 }
             }
         }
@@ -53,7 +53,6 @@
             if(isset($_GET['id'])){
                 $id = $_GET['id'];
                 if($this->playerModel->deletePlayer($id)){
-                    echo "xoas thanh cong";
                     header("Location: index.php");
                     exit;
                 }else{
@@ -62,6 +61,10 @@
             }
         }
         public function search(){
-            
+           if(isset($_GET['key'])){
+                $key = $_GET['key'];
+                $dataID = $this->playerModel->searchPlayer($key);
+           }
+            require_once('view/search.php');
         }
     }

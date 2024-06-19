@@ -65,4 +65,22 @@ class PlayerModel {
         $sql = "DELETE FROM `cauthu` WHERE `id` = '".$id."'";
         return $result = $this->conn->query($sql);  
     } 
+    public function searchPlayer($key){
+        $sql = "SELECT * FROM `cauthu` WHERE `tencauthu` LIKE '%".$key."%' 
+                OR `tuoi` LIKE '%".$key."%' 
+                OR `quoctich` LIKE '%".$key."%' 
+                OR `vitri` LIKE '%".$key."%'
+                OR `luong` LIKE '%".$key."%'  
+            ";
+        if($result = $this->conn->query($sql)){
+            $data = [];
+            if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $datas = new Player($row['id'],$row['tencauthu'],$row['tuoi'],$row['quoctich'],$row['vitri'],$row['luong']);
+                $data[] = $datas;
+            }
+        }
+            return $data;
+        }
+    }
 }

@@ -34,12 +34,6 @@ h2 {
 </style>
 
 <body>
-    <?php
-        require_once __DIR__ . '/../controller/PlayerController.php';
-        require_once __DIR__ . '/../database/Database.php';
-        $playerController = new PlayerController($con);
-        $data = $playerController->index();
-    ?>
     <div class="container">
         <form class="row g-3" method="GET" action="">
             <div class="col-auto">
@@ -68,7 +62,7 @@ h2 {
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($data as $value): ?>
+                <?php foreach ($dataID as $value): ?>
                 <tr>
                     <td><?php echo $value->getTencauthu(); ?></td>
                     <td><?php echo $value->getTuoi(); ?></td>
