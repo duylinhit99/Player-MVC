@@ -29,7 +29,11 @@ class PlayerModel {
                 '".$luong."'
                 )
          ";
-         $result = $this->conn->query($sql);
+         if($result = $this->conn->query($sql)){
+            return true;
+         }else{
+            return false;
+         }
     }
     public function getPlayerById($id) {
         $sql = "SELECT * FROM `cauthu` WHERE `id` = '".$id."' ";
@@ -51,10 +55,14 @@ class PlayerModel {
                 `luong` = '".$luong."'
                 WHERE `id` = '".$id."'
         ";
-        $result = $this->conn->query($sql);
+        if($result = $this->conn->query($sql)){
+            return true; // Cập nhật thành công
+        }else{
+            return false;  // Cập nhật thất bại
+        }
     }   
     public function deletePlayer($id){
         $sql = "DELETE FROM `cauthu` WHERE `id` = '".$id."'";
-        $result = $this->conn->query($sql);  
+        return $result = $this->conn->query($sql);  
     } 
 }

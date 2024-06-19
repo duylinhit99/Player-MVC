@@ -44,7 +44,7 @@ h2 {
                 <button type="submit" class="btn btn-primary mb-3">Search</button>
             </div>
         </form>
-        <h2>Quản lý danh sách cầu thủ</h2>
+        <h2>Quản lý danh sách cầu thủ CLB Real Madrid</h2>
         <a href="index.php?action=create" class="btn btn-primary btn-create">Create</a>
         <table class="table">
             <thead>
