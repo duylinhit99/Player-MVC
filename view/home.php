@@ -36,8 +36,16 @@ h2 {
         $data = $playerController->index();
     ?>
     <div class="container mt-3">
+        <form class="row g-3" method="POST" action="index.php?action=search">
+            <div class="col-auto">
+                <input type="text" class="form-control" id="search" placeholder="Search">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Search</button>
+            </div>
+        </form>
         <h2>Quản lý danh sách cầu thủ</h2>
-        <a href="create.php" class="btn btn-primary btn-create">Create</a>
+        <a href="index.php?action=create" class="btn btn-primary btn-create">Create</a>
         <table class="table">
             <thead>
                 <tr>
@@ -58,9 +66,10 @@ h2 {
                     <td><?php echo $value->getVitri(); ?></td>
                     <td><?php echo $value->getLuong(); ?> $</td>
                     <td>
-                        <a href="../index.php?action=update&id=<?php echo $value->getId(); ?>"
+                        <a href="index.php?action=update&id=<?php echo $value->getId(); ?>"
                             class="btn btn-warning">Edit</a>
-                        <a href="delete.php?id=<?php echo $value->getId(); ?>" class="btn btn-danger">Delete</a>
+                        <a href="index.php?action=delete&id=<?php echo $value->getId(); ?>"
+                            class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

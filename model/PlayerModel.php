@@ -41,5 +41,20 @@ class PlayerModel {
             $data = null; // or handle it differently, e.g., throw an exception
         }
         return $data;
-    }    
+    }
+    public function updatePlayer($id , $tencauthu , $tuoi , $quoctich , $vitri , $luong){
+        $sql = "UPDATE * FROM `cauthu` SET
+                `tencauthu` = '".$tencauthu."',
+                `tuoi` = '".$tuoi."',
+                `quoctich` = '".$quoctich."',
+                `vitri` = '".$vitri."',
+                `luong` = '".$luong."'
+                WHERE `id` = '".$id."'
+        ";
+        $result = $this->conn->query($sql);
+    }   
+    public function deletePlayer($id){
+        $sql = "DELETE FROM `cauthu` WHERE `id` = '".$id."'";
+        $result = $this->conn->query($sql);  
+    } 
 }

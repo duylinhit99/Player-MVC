@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="access/css/create.css" rel="styleSheet">
+    <script src="access/js/create.js"></script>
     <title>Thêm cầu thủ</title>
     <style>
     * {
@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <form method="POST" action="../index.php?action=create" class="form-create container">
+    <form method="POST" action="index.php?action=create" class="form-create container">
         <h2 class="title">Thêm cầu thủ</h2>
         <div class="input-group">
             <input type="text" class="form-control" name="tencauthu" placeholder="Tên cầu thủ">
@@ -54,6 +54,7 @@
         </div>
         <button type="submit" name="create" class="btn btn-primary">Create</button>
     </form>
+
 </body>
 
 </html>

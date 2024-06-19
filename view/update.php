@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <form method="POST" action="index.php?action=update" class="form-create container">
+    <form method="POST" action="index.php" class="form-create container">
         <h2 class="title">Update cầu thủ</h2>
         <div class="input-group">
             <input type="text" class="form-control" value="<?php echo $dataID->getTencauthu(); ?>" name="tencauthu"

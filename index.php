@@ -4,7 +4,7 @@
     $controller = new PlayerController($con);
     switch($action){
         case 'index' : 
-            require 'view/home.php';
+            require_once 'view/home.php';
             break;
         case 'create' :
             $controller->create();
@@ -14,6 +14,9 @@
             break;
         case 'delete' :
             $controller->delete();
+            break;
+        case 'search' :
+            $controller->search();
             break;
         default :
             echo "Error";
