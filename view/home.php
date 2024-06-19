@@ -64,7 +64,7 @@ h2 {
                     <td><?php echo $value->getTuoi(); ?></td>
                     <td><?php echo $value->getQuoctich(); ?></td>
                     <td><?php echo $value->getVitri(); ?></td>
-                    <td><?php echo $value->getLuong(); ?> $</td>
+                    <td><?php echo $value->getLuong(); ?>$</td>
                     <td>
                         <a href="index.php?action=update&id=<?php echo $value->getId(); ?>"
                             class="btn btn-warning">Edit</a>
