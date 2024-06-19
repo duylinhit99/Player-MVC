@@ -62,7 +62,7 @@
         }
         public function search(){
            if(isset($_GET['key'])){
-                $key = $_GET['key'];
+                $key = trim($_GET['key']);
                 $dataID = $this->playerModel->searchPlayer($key);
            }
             require_once('view/search.php');

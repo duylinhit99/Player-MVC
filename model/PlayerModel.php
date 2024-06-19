@@ -70,7 +70,8 @@ class PlayerModel {
                 OR `tuoi` LIKE '%".$key."%' 
                 OR `quoctich` LIKE '%".$key."%' 
                 OR `vitri` LIKE '%".$key."%'
-                OR `luong` LIKE '%".$key."%'  
+                OR `luong` LIKE '%".$key."%' 
+                ORDER BY `id` DESC 
             ";
         if($result = $this->conn->query($sql)){
             $data = [];
