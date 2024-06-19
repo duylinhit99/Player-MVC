@@ -39,8 +39,7 @@
                     $luong = $_POST['luong'];
                     // truyền dữ liệu sang model
                     if($this->playerModel->updatePlayer($id , $tencauthu , $tuoi , $quoctich , $vitri , $luong)){
-                        // echo "Update thành công <a style='color: red' href='index.php'>Danh sách cầu thủ</a>";
-                        header("Location : index.php");
+                        echo "Update thành công <a style='color: red' href='index.php'>Danh sách cầu thủ</a>";
                     }else{
                         echo "Update thât bại";
                     }     
