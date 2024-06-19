@@ -37,8 +37,7 @@
                     $vitri = $_POST['vitri'];
                     $luong = $_POST['luong'];
                     if(!$this->playerModel->updatePlayer($id , $tencauthu , $tuoi , $quoctich , $vitri , $luong)){
-                        header("Location : index.php");
-                        exit;
+                        echo "Update thành công <a style='color: red' href='index.php'>Danh sách cầu thủ</a>";
                     }else{
                         echo "Update thât bại";
                     }

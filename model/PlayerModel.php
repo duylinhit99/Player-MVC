@@ -43,7 +43,7 @@ class PlayerModel {
         return $data;
     }
     public function updatePlayer($id , $tencauthu , $tuoi , $quoctich , $vitri , $luong){
-        $sql = "UPDATE * FROM `cauthu` SET
+        $sql = "UPDATE `cauthu` SET
                 `tencauthu` = '".$tencauthu."',
                 `tuoi` = '".$tuoi."',
                 `quoctich` = '".$quoctich."',
